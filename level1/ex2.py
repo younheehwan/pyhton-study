@@ -32,3 +32,5 @@ print(r2)
 str2="가나다라마"
 r4=",".join(str2)
 print(r4)
+
+

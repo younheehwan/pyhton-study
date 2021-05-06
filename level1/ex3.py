@@ -57,5 +57,3 @@ print(tuple4)
 list10=list(tuple1)
 print(list10)
 
-
-#3. 딕셔너리
