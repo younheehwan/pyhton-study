@@ -89,7 +89,7 @@ public class UserController {
 		User UserEntity = userRepository.findById(id)
 				.orElseThrow(() -> new CustomException("selectOne : 아이디를 잘못 입력하였습니다.")); //optional
 		
-		return UserEntity;
+		return UserEntity; // 스프링이 JSON을 
 	}
 	
 	// UPDATE user SET username = ?, password = ?, email = ? WHERE id = ?

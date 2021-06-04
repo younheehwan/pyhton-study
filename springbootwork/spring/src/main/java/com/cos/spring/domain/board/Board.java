@@ -4,6 +4,7 @@ import java.sql.Timestamp;
 import java.util.TimerTask;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -30,8 +31,8 @@ public class Board {
 	private String content;
 	
 	@JoinColumn(name = "userId")
-	@ManyToOne
-	private User user;
+	@ManyToOne(fetch = FetchType.EAGER) // EAGER
+	private User user; // 순방향 매핑
 	
 	@CreationTimestamp // save 될 대 마다 현재시간을 입력해 준다.
 	private Timestamp created;
