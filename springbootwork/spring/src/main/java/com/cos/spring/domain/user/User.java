@@ -28,6 +28,7 @@ public class User {
 	private String password;
 	private String email;
 	
+	// EAGER 전략 : User 와 Board를 Join 해서 가져옴.
 	// LAZY 전략 : 일단 User만 Select 하고, 나중에 getBoard를 호출할 때 board를 지연 select 해!!
 	@JsonIgnoreProperties({"user"})
 	@OneToMany(mappedBy = "user", fetch = FetchType.LAZY) // FK의 주인을 알려주는 방법 : mappedBy = 주인의 변수명

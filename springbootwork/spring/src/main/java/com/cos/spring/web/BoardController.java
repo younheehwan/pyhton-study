@@ -45,4 +45,5 @@ public class BoardController {
 		return boardRepository.findById(id)
 						.orElseThrow(() -> new CustomException("findById : board의 id가 잘못되었습니다."));
 	}
+	
  }

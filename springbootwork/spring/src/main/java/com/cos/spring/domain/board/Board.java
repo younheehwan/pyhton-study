@@ -15,6 +15,7 @@ import javax.persistence.ManyToOne;
 import org.hibernate.annotations.CreationTimestamp;
 
 import com.cos.spring.domain.user.User;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.Data;
 
@@ -30,6 +31,7 @@ public class Board {
 	@Lob
 	private String content;
 	
+	@JsonIgnoreProperties({"board", "password"})
 	@JoinColumn(name = "userId")
 	@ManyToOne(fetch = FetchType.EAGER) // EAGER
 	private User user; // 순방향 매핑
